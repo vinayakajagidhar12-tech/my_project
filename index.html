@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect 4 - AI Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app-container">
+    <div class="container">
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <div id="menu-screen" class="screen">
+        <div class="logo-area">
+            <div class="board-icon">
+                <div class="mini-hole"></div><div class="mini-hole mini-red"></div><div class="mini-hole"></div><div class="mini-hole"></div>
+                <div class="mini-hole"></div><div class="mini-hole mini-yellow"></div><div class="mini-hole mini-red"></div><div class="mini-hole"></div>
+                <div class="mini-hole"></div><div class="mini-hole"></div><div class="mini-hole mini-yellow"></div><div class="mini-hole"></div>
+            </div>
+            <h1>4 IN A ROW</h1>
+            <p> Mini Project</p>
+        </div>
+
+        <div class="menu-buttons">
+            <button class="btn btn-blue" onclick="startGame('ai')">One Player (vs AI)</button>
+            <button class="btn btn-purple" onclick="startGame('friend')">Two Players</button>
+        </div>
+    </div>
+
+    <div id="game-screen" class="screen">
+        <div class="game-header">
+            <button class="back-btn" onclick="backToMenu()">&#10094; Menu</button>
+            
+            <div id="scoreboard">
+                <span id="score-red" class="score-pill red">Red: 0</span>
+                <span id="score-yellow" class="score-pill yellow">Yel: 0</span>
+            </div>
+
+            <div style="width: 40px;"></div>
+        </div>
+
+        <div id="status-display">Your Turn</div>
+
+        <div id="game-board">
+            </div>
+    </div>
+
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">Red Wins!</h2>
+            <p id="modal-msg">Better luck next time.</p>
+            <button class="btn btn-blue" onclick="resetBoard()">Play Again</button>
+            <button class="btn btn-red" onclick="backToMenu()">Exit</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
